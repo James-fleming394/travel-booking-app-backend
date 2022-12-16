@@ -1,4 +1,4 @@
-# Marvel Ecommerce App
+# Travel and Booking App
 
 ## [Deployed Site]()  
 Created by James Fleming

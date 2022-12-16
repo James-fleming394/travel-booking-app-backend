@@ -1,0 +1,27 @@
+{
+  "name": "travel-booking-app-backend",
+  "version": "1.0.0",
+  "description": "## [Deployed Site]()   Created by James Fleming # Socials",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/James-fleming394/travel-booking-app-backend.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/James-fleming394/travel-booking-app-backend/issues"
+  },
+  "homepage": "https://github.com/James-fleming394/travel-booking-app-backend#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "mongoose": "^6.8.0",
+    "morgan": "^1.10.0"
+  }
+}

@@ -5,6 +5,7 @@ const db = require('./db');
 const authRoute = require('./routes/auth.js');
 const userRoute = require('./routes/users.js');
 const hotelsRoute = require('./routes/hotels.js');
+const roomsRoute = require('./routes/rooms.js');
 
 
 const app = express();
@@ -20,6 +21,7 @@ app.use(logger('dev'));
 app.use('/api/auth', authRoute);
 app.use('/api/user', userRoute);
 app.use('/api/hotels', hotelsRoute);
+app.use('/api/rooms', roomsRoute);
 
 db.on('error', console.error.bind(console, 'MongoDB Connection Error'));
 

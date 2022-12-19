@@ -4,6 +4,8 @@ const logger = require('morgan');
 const db = require('./db');
 const authRoute = require('./routes/auth.js');
 const userRoute = require('./routes/users.js');
+const hotelsRoute = require('./routes/hotels.js');
+
 
 const app = express();
 const PORT = process.env.PORT || 6001;
@@ -17,6 +19,7 @@ app.use(logger('dev'));
 
 app.use('/api/auth', authRoute);
 app.use('/api/user', userRoute);
+app.use('/api/hotels', hotelsRoute);
 
 db.on('error', console.error.bind(console, 'MongoDB Connection Error'));
 

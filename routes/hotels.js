@@ -5,4 +5,5 @@ router.get("/", (req, res) => {
     res.send("Hotels Endpoint")
 })
 
+
 module.exports = router;

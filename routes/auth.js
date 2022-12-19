@@ -1,13 +1,9 @@
 const express = require('express');
+const controlAuth = require('../controllers/auth.js');
+
 const router = express.Router();
 
-router.get("/", (req, res) => {
-    res.send("Auth Endpoint")
-})
-
-router.get("/register", (req, res) => {
-    res.send("Register Endpoint")
-})
+router.post("/register", controlAuth.register);
 
 
 module.exports = router;

@@ -1,6 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 const logger = require('morgan');
+const cookieParser = require('cookie-parser');
 const db = require('./db');
 const authRoute = require('./routes/auth.js');
 const userRoute = require('./routes/users.js');
@@ -15,6 +16,7 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(logger('dev'));
+app.use(cookieParser());
 // app.use(express.static(`${__dirname}/client/build`));
 
 

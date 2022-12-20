@@ -1,27 +1,27 @@
 const express = require('express');
 const controlHotel = require('../controllers/hotel.js');
+const { verifyAdmin } = require("../utility/verifyToken.js");
 
 const router = express.Router();
 
-//GET ALL
+//CREATE
+router.post("/", verifyAdmin, controlHotel.createHotel);
 
-router.get('/', controlHotel.getAllHotels);
-
-//GET 
-
-router.get('/:id', controlHotel.getHotel);
-
-//CREATE 
-
-router.post('/', controlHotel.createHotel);
-
-//UPDATE 
-
-router.put('/:id', controlHotel.updateHotel);
+//UPDATE
+router.put("/:id", verifyAdmin, controlHotel.updateHotel);
 
 //DELETE
+router.delete("/:id", verifyAdmin, controlHotel.deleteHotel);
 
-router.delete('/:id', controlHotel.deleteHotel);
+//GET
+router.get("/find/:id", controlHotel.getHotel);
+
+//GET ALL
+
+router.get("/", controlHotel.getHotels);
+router.get("/countByCity", controlHotel.countByCity);
+router.get("/countByType", controlHotel.countByType);
+router.get("/room/:id", controlHotel.getHotelRooms);
 
 
 
